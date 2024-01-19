@@ -1,0 +1,55 @@
+@use "./../utils/variables" as *;
+@use "./../utils/mixins" as m;
+
+.btn{
+    @include m.width-height(100%,auto);
+    text-align: center;
+
+    &__element{
+      @include m.flex-justify-content-align-items(flex,center,center);
+      @include m.font-size-font-weight(112%,normal);
+      height: 56px;
+      color: $color-footer;
+      background-image: linear-gradient($color-secondary, $color-primary);
+      border: none;
+      border-radius: 50px;
+      background-color: $color-secondary;
+      margin: auto;
+      padding: 0 23px 0 31px;
+      cursor:pointer;
+      transition : transform linear 0.3s;
+      @include m.tablet
+      {
+        height:60px;
+        @include m.font-size-font-weight(20px,bolder);
+        padding:0 25px 0 25px;
+      }
+      @include m.desktop
+      {
+        @include m.font-size-font-weight(27px,bolder);
+        height:80px;
+        padding:0 30px 0 30px;
+      }
+      &:hover
+      {
+        @include m.button_hover;
+      }    
+  }
+}
+
+.menu__btn__element
+{
+  width: 206px;
+  padding: 0 25px 0 28px;
+  transition : transform linear 0.3s;
+  @include m.desktop
+  {
+    padding: 0 80px 0 80px;
+    height:60px;
+    font-size: 22px;
+  }
+  &:hover
+      {
+        @include m.button_hover;
+      }
+}

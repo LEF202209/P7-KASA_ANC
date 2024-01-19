@@ -1,0 +1,205 @@
+@use "../utils/variables" as *;
+
+// media queries
+
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content; 
+    }
+}
+
+// les boutons //
+@mixin btn-before ($content,$mrg-right) {
+    font-family: FontAwesome;
+    color:$color-footer;
+    font-size: 13px;
+    content: $content;
+    margin-right:$mrg-right;
+} 
+@mixin color-button($bk-color,$border-width,$border-style,$border-color)
+{
+    background-color:$bk-color;
+    border-top: $border-width $border-style $border-color;
+    border-right: $border-width $border-style $border-color;
+    border-bottom: $border-width $border-style $border-color;
+}
+// les coeurs //
+@mixin heart($font-weight,$top,$right)
+{
+    font-family: "Font Awesome 5 Free";
+    content: "\f004";
+    font-weight: $font-weight;   
+    font-size: 1.6rem;
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+@mixin heart-after
+{
+    background: linear-gradient(#9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: scale(0);
+}
+@mixin heart-hover
+{
+    transform: scale(1); 
+    transition: all ease 0.8s;
+}
+
+// définition hauteur et largeur des blocs //
+@mixin width-height($width,$height)
+{
+    width: $width;
+    height: $height;
+}
+
+// les icônes dans le bloc fonctionnement //
+@mixin format-icon-functioning($padding-left,$padding-right)
+{
+    @extend .functioning__column__button__icon;
+    padding-right:$padding-right;
+    padding-left:$padding-left;
+}
+
+// définition des flexbox //
+@mixin flex-justify-content-align-items($display,$justify-content,$align-items)
+{
+    display: $display;
+    justify-content: $justify-content; 
+    align-items: $align-items;   
+}
+
+@mixin flex-flex-direction-align-items($display,$flex-direction,$align-items)
+{
+    display: $display;
+    flex-direction: $flex-direction; 
+    align-items: $align-items;    
+}
+
+@mixin flex-justify-content-flex-direction($display,$justify-content,$flex-direction)
+{
+    display: $display;
+    justify-content: $justify-content;
+    flex-direction: $flex-direction;
+}
+
+@mixin flex-justify-content-flex-direction-align-items($display,$justify-content,$flex-direction,$align-items)
+{
+    display: $display;
+    flex-direction:$flex-direction ;
+    justify-content:$justify-content ;
+    align-items: $align-items;
+}
+
+//  taille et forme gras des caractères //
+@mixin font-size-font-weight($font-size,$font-weight)
+{
+    font-size:$font-size;
+    font-weight:$font-weight;
+}
+ // format des titres - troncatures //
+@mixin title_format($overflow,$white-space,$text-overflow)
+{
+    overflow: $overflow;
+    white-space: $white-space;
+    text-overflow: $text-overflow;
+}
+// initialisation marge en  haut et marge en bas du bloc principal des menus //
+@mixin menu__block-init($margin-top,$padding-bottom)
+{
+    @extend .menu__block;
+    margin-top:$margin-top;
+    padding-bottom:$padding-bottom;
+} 
+//initialisation  marge en bas des sous bloc des menus//
+@mixin menu__block__column-init($margin-bottom)
+{
+    @extend .menu__block__column;
+    margin-bottom: $margin-bottom;
+    @include desktop
+    {
+    margin-bottom: 50px;
+    }
+}
+//initialisation  marge en bas contenu des menu entrées et desserts//
+@mixin menu__block__details-init($margin-bottom)
+{
+    @extend .menu__block__details;
+    margin-bottom:$margin-bottom;
+}
+//initialisation  marge en bas contenu des menu plats//
+@mixin menu__block__dishes-init($margin-bottom)
+{
+    @extend .menu__block__dishes;
+    margin-bottom:$margin-bottom;
+}
+//initialisation  marge en bas titre (Entrées / plats / Desserts )//
+@mixin menu__block__details__title-init($margin-bottom)
+{
+  @extend .menu__block__details__title;
+  margin-bottom: $margin-bottom;
+  @include desktop
+  {
+    margin-bottom: 33px;
+  }
+}
+
+//initialisation  marge en bas de chaque carte //
+@mixin menu__block__details__card-init($margin-bottom)
+{
+    @extend .menu__block__details__card;
+    margin-bottom: $margin-bottom;
+    @include desktop
+    {
+        margin-bottom:35px;
+    }
+}
+
+//initialisation affichage prix de chaque carte //
+@mixin menu__block__details__card__price-init($margin-bottom,$margin-right)
+{
+    margin-bottom: $margin-bottom;
+    margin-right: $margin-right;
+    margin-left:auto;
+    font-size:98%;
+    font-weight: bold;
+    @include desktop
+    {
+    margin-left: 10px;
+    margin-right:5px;
+    font-size:92%;
+    }
+}
+
+//initialisation marge bas //
+@mixin margin-bottom-init($margin-bottom)
+{
+    margin-bottom: $margin-bottom;
+    @include desktop
+    {
+        margin-bottom: 35px;
+    }
+}
+
+// Définition largeur bloc titres des menus //
+@mixin menu__block__details__card__titles-init($width)
+{
+    overflow:hidden;
+    width:$width;
+    padding-top:16px;
+}
+
+// changement au passage de la souris pour les boutons //
+@mixin button_hover
+{
+    background-image: linear-gradient($color-primary,$color-secondary);
+    box-shadow: 0px 2px 3px $color-bk-black;
+}

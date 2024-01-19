@@ -1,0 +1,350 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as m;
+
+// animation fond d'écran sombre & centrage spinner  //
+.loader__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width:100%;
+    z-index:101;
+  }
+
+.loader__container::before
+  {
+    content: "";
+    position: fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color: $color-bk-black; 
+    opacity: 0.5;
+    animation:loader_background 0.1s $animation_duration_loader forwards;
+    z-index:100;
+  }
+
+  // animation : boîte spinner //
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    opacity: 0.8;
+    border: 10px solid $color-primary;
+    background-color:lighten($color-secondary,20%);
+    margin:auto;
+    animation: scale-up-center $animation_duration_loader ease-in-out;
+    animation-fill-mode: forwards;
+    z-index:102;
+    width: 17rem; 
+    height: 17rem;
+    border-radius: 8.5rem; 
+    overflow:hidden;
+    @include m.tablet
+    {
+      width: 25rem;
+      height: 25rem;
+      border-radius: 12.5rem; 
+    }
+    @include m.desktop
+    {
+      width: 35rem;
+      height: 35rem;
+      border-radius: 17.5rem;
+    }
+  }
+    
+// animation : spinner - texte //  
+    .loader p {
+      background: linear-gradient(to right,$color-primary, $color-secondary);
+      font-family: "shrikhand", sans-serif;
+      font-weight: 900;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: rotate_p forwards $animation_duration_loader;
+      z-index:103;
+    }
+  // Fin loader spinner //
+  
+.functioning
+{
+    display:flex;
+    flex-direction: column;
+    margin-bottom:45px;
+    @include m.tablet
+    {
+    margin-bottom: 0px;
+    }
+
+    &__column
+    {
+        @include m.flex-flex-direction-align-items(flex,column,center);
+        width: 85%;
+        margin: auto;
+        counter-reset: listCounter;
+
+    @include m.desktop
+        {
+            flex-direction: row;
+            justify-content: space-around;
+            margin-bottom: 50px;
+            width: 95%;
+        }   
+    }
+    &__title
+    {
+        width: 88%;
+        margin: 0 auto 35px auto;
+        font-size: 1.65rem;
+        @include m.tablet
+        {
+            font-size: 2.25rem;
+            margin-bottom: 55px;
+        }
+
+        @include m.desktop
+        {
+            font-size: 2.813rem;
+            margin-bottom: 70px;
+            text-align: center;
+        }
+}
+}
+.functioning__column__button
+{
+    @include m.flex-justify-content-align-items(flex, flex-start,center);
+    @include m.width-height(100%,78px);
+    @include m.color-button($color-bk-functioning,2px,solid,$color-bk-functioning);
+    border-radius: 25px;
+    box-shadow: 0px 4px 15px $color-bk-functioning-shadow;
+    margin: 0 0 31px 8px;
+    position: relative;
+    counter-increment: listCounter;
+
+    @include m.desktop
+    {
+        width:30%;
+    }
+
+    &:hover
+    {
+        @include m.color-button($color-bk-functioning-hover,2px,solid,$color-bk-functioning-hover);
+        transform: scale(1.02);
+        transition: transform linear 0.5s;
+    }
+
+    &:hover i
+    {color:$color-primary;}
+
+    &__number
+    {
+        
+        @include m.flex-justify-content-align-items(flex,center,center);
+        @include m.width-height(25px,25px);
+        background-color:$color-primary;
+        color:$color-footer;
+        border: solid $color-primary 1px;
+        border-radius: 50%;
+        position:absolute;
+        left:-11px;
+        &::after {
+            content:counter(listCounter,Roboto);
+        }
+    }
+
+    &__icon
+    {   
+        font-size: 1.313rem;
+        color: $color-shadow-dark;
+        padding: 0px 31px 0 36px;
+        @include m.desktop
+        {
+            padding: 0px 20px 0 30px;
+        }
+    }
+    &__icon2
+    {
+        @include m.format-icon-functioning(36px,26px);
+    }
+
+    &__icon3
+    {
+        @include m.format-icon-functioning(39px,20px);
+    }
+
+    &__text
+    {   
+        display: block;
+        @include m.font-size-font-weight(110%,bold);
+        width: 108%;
+        @include m.desktop
+        {
+            font-size: 1.5rem;
+        }
+      
+    }
+}
+/*-----------------------------------------------------------------------------------------------*/
+/*      Main : restaurant                                                                        */
+/*-----------------------------------------------------------------------------------------------*/
+.restaurant
+{
+    @include m.flex-justify-content-flex-direction(flex,space-between,column);
+    background-color: $color-bk-functioning;
+    padding-bottom: 48px;
+    margin: auto;
+
+    &__title{
+        width:88%;
+        font-size: 1.65rem;
+        margin:55px auto 25px auto;
+        @include m.tablet
+        {
+            font-size: 2.25rem;
+            margin-bottom: 55px;
+            margin-top:40px;
+        }
+
+        @include m.desktop
+        {
+            font-size: 2.813rem;
+            margin-bottom: 70px;
+            text-align: center;
+        }
+    }
+    &__column
+    {
+        @include m.flex-flex-direction-align-items(flex,column,center);
+        flex-wrap: nowrap;
+        max-width: 450px;
+        margin-bottom: 52px;
+        width:90%;
+        margin:auto;
+
+        @include m.tablet
+        {
+          flex-direction: row;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          max-width: 1280px;
+        }
+    }
+}
+
+
+.restaurant__column__card 
+{
+    margin:0;
+    width:100%;
+           
+    @include m.tablet
+        {
+            width: 46%;
+        }
+
+    & figure
+    {
+        @include m.flex-justify-content-flex-direction(flex,space-between,column);
+        flex-wrap: wrap;
+        width: 100%;
+        border-radius: 18px;
+        margin: 0px auto 26px auto;
+        box-shadow: 1px 2px 20px $color-bk;
+    
+        @include m.tablet
+        {
+            margin-bottom: 70px;
+        }
+    
+        &:hover
+        {
+            box-shadow: 2px 8px 18px $color-shadow-dark;
+            transform: scale(1.05);
+            transition: ease 0.5s;
+        }
+    }
+    &__new
+        {
+            @include m.flex-justify-content-align-items(flex, center,center);
+            @include m.width-height(86px,33px);
+            background-color: $color-tertiary;
+            position: absolute;
+            top: 12px;
+            right: 15px;
+            color: $color-shadow-dark;
+            border-radius: 4px;
+            z-index: 999;
+            @include m.font-size-font-weight(16px,bold);
+            @include m.tablet
+            {
+                @include m.width-height(115px,40px);
+                font-size: 18px;
+            }
+            @include m.desktop
+            {
+                @include m.width-height(130px,50px);
+                font-size: 22px;
+            }
+        }
+    &__text
+        {
+            padding: 13px 13px;
+            margin: 0 0 1px 2px;
+            position:relative;
+            @include m.tablet
+            {
+                padding: 20px 20px;
+            }
+            span::before 
+            {
+                @include m.heart(400,19px,28px);
+            }
+            span::after 
+            {
+                @include m.heart(600,19px,28px);
+                @include m.heart-after;
+              }
+            
+            span:hover::after{
+                @include m.heart-hover;
+            }
+            & h4
+            {
+                display:flex;
+                justify-content: space-between;
+                font-size:19.8px;
+                margin: 0 0 4px 0;
+            }
+        
+            & p
+            {
+                font-size: 18.9px;
+                margin: 0;
+                text-align: left;
+            }
+        }
+    &__image
+        {
+            position:relative;
+            &_img
+            {
+                @include m.width-height(100%,190px);
+                object-fit: cover;
+                border-radius: 18px 18px 0 0;
+                object-position: bottom;
+                @include m.tablet
+                {
+                 height: 210px;
+                }
+            }
+            &_img2
+            {
+                object-position: 100% 61%;
+            }    
+        }
+    }
+

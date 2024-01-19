@@ -1,0 +1,59 @@
+@use "./../utils/variables" as *;
+@use "./../utils/mixins" as m;
+
+.footer
+    { 
+    &__nav
+        {
+            // @include m.flex-justify-content-flex-direction(flex,flex-start,column);
+            @include m.flex-justify-content-flex-direction-align-items(flex,flex-start,column,flex-start);       
+            padding: 0 7% 22px 7%;
+            background-color:$color-bk-footer;
+    
+            @include m.desktop
+            {
+                justify-content:center;
+                align-items: center;
+            }    
+            ul
+                {
+                    margin:0;
+                    padding:0;
+                }
+
+            &__title
+                {
+                    @include m.font-size-font-weight(1.2rem,400);
+                    font-family: $font-family-secondary;
+                    color: $color-footer;
+                    margin: 0;
+                    padding:24px 0 20px 0;
+                    @include m.desktop
+                    {
+                        font-size: 2.3rem;
+                    }
+                }
+            }
+            li{
+                margin-bottom:7px;
+                &:first-child::before
+                {
+                    @include m.btn-before("\f2e7",10px);
+                }
+                &:nth-child(2)::before
+                {
+                    @include m.btn-before("\f4c4",4px);
+                }
+            }
+            a
+                {
+                    color:$color-footer;
+                    margin-bottom: 0;
+                    padding: 5px 0 10px 0;
+                    font-size: 17.5px;
+                &:hover
+                    {
+                        color:$color-tertiary;
+                    }
+                }
+        }

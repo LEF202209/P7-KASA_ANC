@@ -1,0 +1,42 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as m;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*
+    {
+        box-sizing: border-box; /* Opera/IE 8+ */
+        -moz-box-sizing: border-box; /* Firefox, autres Gecko */
+        -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
+        list-style-type: none;
+    }
+
+body
+    {
+        font-size: 16px;
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        min-width: 268px;
+    } 
+	
+img{
+    object-fit: cover;
+    overflow: hidden;
+}
+
+a
+    {
+        text-decoration:none;
+        color:$color-bk-black;
+    }
+
+    input::placeholder {
+        color: $color-search-input;
+        @include m.font-size-font-weight(17px,bold);
+        @include m.tablet
+        {font-size:20px;}
+
+        @include m.desktop
+        {font-size:30px;}
+      }
