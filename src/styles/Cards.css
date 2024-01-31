@@ -1,0 +1,23 @@
+.Cards{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    background-color: var(--background-color);
+    padding: 50px;
+    border-radius: 25px;
+    background-color:rgb(247,247,247);
+    margin: 0 auto 25px auto;}
+
+@media screen and (max-width: 1230px){
+    .Cards{
+    gap: 25px; 
+    padding:25px 15px; 
+    }      
+}
+@media screen and (max-width: 768px){ 
+    .Cards{ 
+    width: 100%;}
+}
