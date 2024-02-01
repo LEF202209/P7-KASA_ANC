@@ -5,11 +5,10 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 50px;
-    background-color: var(--background-color);
     padding: 50px;
     border-radius: 25px;
     background-color:rgb(247,247,247);
-    margin: 0 auto 25px auto;}
+    margin: 0 auto 45px auto;}
 
 @media screen and (max-width: 1230px){
     .Cards{
@@ -19,5 +18,8 @@
 }
 @media screen and (max-width: 768px){ 
     .Cards{ 
-    width: 100%;}
+    width: 100%;
+    padding:25px 0px; 
+    background-color:#FFFFFF;
+    margin-bottom: 60px;}
 }

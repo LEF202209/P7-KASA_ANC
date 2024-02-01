@@ -29,7 +29,7 @@ body{
   }
 
 .Container {
-  width:90%;
+  width:86%;
   margin-right:auto;
   margin-left: auto;
 }
@@ -47,11 +47,15 @@ img {
   object-fit:cover;
 }
 
-/* @media screen and (max-width: 768px)
+@media screen and (max-width: 768px)
  {
     .Container
     {
-        width:95%;
+        width:89%;
     }
-  } */
+    body{
+      padding-top: 20px;
+    }
+  }
+
 

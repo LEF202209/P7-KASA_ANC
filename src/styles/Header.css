@@ -53,12 +53,11 @@ header{
     header
     {
     height: auto;
-    max-height:47px;
-    margin-bottom:16px;
     }
 
     .Header_logo_img{
         height:47px;
+        width:145px;
      }
 
     .nav_list_element{
