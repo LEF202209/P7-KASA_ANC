@@ -29,16 +29,18 @@ function About() {
     return (
         <div>
             <Header />
-            <Banner/>
             <main className= 'Container'>
-            {datas.map(data => (
-                <Collapse 
-                key={data.id}
-                id={data.id}
-                title={data.title}
-                content={data.content}
-                />
-            ))}
+				<Banner/>
+				<section className= 'Collapse'>
+					{datas.map(data => (
+						<Collapse 
+						key={data.id}
+						id={data.id}
+						title={data.title}
+						content={data.content}
+						/>
+					))}
+				</section>
             </main>
             <Footer/>
         </div>

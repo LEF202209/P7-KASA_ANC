@@ -10,10 +10,9 @@
     background-color:rgb(247,247,247);
     margin: 0 auto 45px auto;}
 
-@media screen and (max-width: 1230px){
+@media screen and (max-width: 1278px){
     .Cards{
     gap: 25px; 
-    padding:25px 15px; 
     }      
 }
 @media screen and (max-width: 768px){ 

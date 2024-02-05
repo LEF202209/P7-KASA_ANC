@@ -8,12 +8,7 @@ export default function Banner() {
 	const [routeHome, setRouteHome] = useState(true);
 	useEffect(() => {
 		const handleLocationChange = () =>{
-		if (window.location.pathname === '/') {
-		  setRouteHome(true);
-		} else {
-		  setRouteHome(false);
-		}
-		}
+		(window.location.pathname === '/')?setRouteHome(true):setRouteHome(false);}
 		// Appel initial pour gérer la valeur initiale
 		handleLocationChange(); 
 		// Écouteur pour gérer les changements d'URL
@@ -27,7 +22,7 @@ export default function Banner() {
 	console.log("currentRoute = "+routeHome)
 	
 	return (
-		<section className={`Container banner ${routeHome?'banner_home':'banner_about'}`}>
+		<section className={`banner ${routeHome?'banner_home':'banner_about'}`}>
 			{/* <section className={`banner${routeHome ? '' : ' banner_about'} Container`}></section> */}
 			{routeHome? <h1>Chez vous, partout et ailleurs</h1> : null}
 		</section>

@@ -22,19 +22,23 @@ import React from 'react';
 import datas from '../../datas/datas.js';
 import Item from '../Item';
 import '../../styles/Cards.css';
+import Banner from '../../components/Banner';
 
 
 function Cards() {
   return (
-    <main className='Cards Container'>
-      {datas.map(data => (
-        <Item 
-          key={data.id}
-          id={data.id}
-          title={data.title}
-          cover={data.cover}
-        />
-      ))}
+    <main className='Container'>
+      <Banner/>
+      <section className="Cards" >
+        {datas.map(data => (
+          <Item 
+            key={data.id}
+            id={data.id}
+            title={data.title}
+            cover={data.cover}
+          />
+        ))}
+      </section>
     </main>
   );
 }

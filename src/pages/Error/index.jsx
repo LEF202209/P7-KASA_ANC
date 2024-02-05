@@ -8,10 +8,8 @@ function Error () {
          <div>
             <Header/>
             <main className="Error_container Container">
-                <div className="Error_infos">
-                    <h1 className="Error_number"> 404 </h1>
-                    <p className="Error_text"> Oups! La page que vous demandez n'existe pas. </p>
-                </div>
+                <h1 className="Error_number"> 404 </h1>    
+                <p className="Error_text"> Oups! La page que vous demandez n'existe pas. </p>
                 <li className="Error_return">
                     <Link to='/'> Retourner sur la page d'accueil</Link>
                 </li>

@@ -12,6 +12,7 @@
     height: 223px;
     padding: 20px;
 }
+
 .banner_home{
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
 url('../assets/banner_home.jpg');
