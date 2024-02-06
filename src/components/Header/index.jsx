@@ -8,8 +8,7 @@ export default function Header (){
             <div className="Header_logo">
                 <img src={imgLogo} alt="Logo Kasa" className="Header_logo_img" />
             </div>
-            <Navbar/>
-            
+            <Navbar/>    
         </header>
     )
 }
