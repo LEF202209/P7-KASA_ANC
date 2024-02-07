@@ -1,11 +1,11 @@
 import  { useState } from 'react';
-import arrowPrev  from '../../assets/left_arrow.png';
-import arrowNext from '../../assets/right_arrow.png';
+import arrowPrev  from '../../assets/Arrow_back.png';
+import arrowNext from '../../assets/Arrow_forward.png';
 import '../../styles/Carousel.css';
 
-function  Carousel ({ views })  {
+function  Slideshow ({ views })  {
   const [currentViewIndex, setCurrentViewIndex] = useState(0);
-
+  /* Fonction calcul index pour view suivante */
   const goToNextView = () => {
     setCurrentViewIndex (currentViewIndex + 1);
     if (currentViewIndex >= views.length-1) {
@@ -13,6 +13,7 @@ function  Carousel ({ views })  {
     }
   };
   
+   /* Fonction calcul index pour view précédente */
   const goToPreviousView = () => {
     setCurrentViewIndex (currentViewIndex - 1);
     console.log(currentViewIndex+ "nbre "+views.length+"lien "+views[currentViewIndex])
@@ -21,17 +22,21 @@ function  Carousel ({ views })  {
     }
   };
 
-
-  
   return (
     <main className='Container'>
     <div className="carousel">
-      <section className="carouselImage"    
-        style={{ backgroundImage: `url(${views[currentViewIndex]})` }}  >  
-        {/* Affiche les flèches de navigation */}
+      <section className="carouselImage" >
+        {/* /* Affiche view pièce en background  */}  
+        {/* style={{ backgroundImage: `url(${views[currentViewIndex]})` }}  >   */}
+        {/* Affiche les flèches de navigation précédente */}
+        <div className="carouselImageContainer">
+          <img src={views[currentViewIndex]} className="carouselImage"
+          alt="CarouselImage" />
+         </div>
         <button onClick={goToPreviousView} className="carouselArrow carouselArrowLeft">
             <img src={arrowPrev} alt="Previous" />
         </button>
+        {/* Affiche les flèches de navigation suivante */}
         <button onClick={goToNextView} className='carouselArrow carouselArrowRight'>
             <img src={arrowNext} alt="Next" />
         </button>
@@ -41,4 +46,4 @@ function  Carousel ({ views })  {
   );
 };
 
-export default Carousel;
+export default Slideshow;
