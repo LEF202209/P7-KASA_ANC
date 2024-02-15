@@ -38,6 +38,7 @@ function About() {
 						id={data.id}
 						title={data.title}
 						content={data.content}
+						collapseDirection="column"
 						/>
 					))}
 				</section>

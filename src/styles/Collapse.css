@@ -1,5 +1,4 @@
 .collapse_container {
-    width:82.5%;
     margin-left: auto;
     margin-right:auto;
     margin-bottom:30px;
@@ -7,6 +6,20 @@
     background-color: #F7F7F7; 
     border-radius: 10px;
 }
+
+.column {
+    width:82.5%;
+}
+
+.row {
+    width:100%;
+}
+
+.collapse_row {
+    font-size:18px;
+}
+
+
 
 .collapse_title_container {
     display: flex;
@@ -33,6 +46,9 @@
     margin-top:-10px;
     position : relative;
     z-index: 10;  
+}
+.container_row{
+    min-height:249px
 }
 
 .collapsible_close {
