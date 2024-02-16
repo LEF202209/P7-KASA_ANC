@@ -54,10 +54,14 @@ export default function Accomodation () {
                         <div className ="accomodation_infos_title_location"> 
                             <span className ="accomodation_infos_title">{dataCurrent[0].title}</span>
                             <h1 className ="accomodation_infos_location">{dataCurrent[0].location}</h1>
+                            <div className ="accomodation_infos_tag">
                             {dataCurrent[0].tags.map((tag, index) => (
-                                <span key={index} className = "tag_button">{tag}</span>
+                                <div className="accomodation_infos_tag_button_container">
+                                    <span key={index} className = "accomodation_infos_tag_button">{tag}</span>
+                                </div>
                                 ))
                             }
+                            </div>
                         </div>
                         <div className="accomodation_hosts">
                             <div className="accomodation_hosts_details">

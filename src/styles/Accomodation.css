@@ -1,3 +1,10 @@
+.accomodation{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
 .accomodation_infos_title {
     font-family: var(--font-family);
     font-style: normal;
@@ -22,19 +29,33 @@
     margin-bottom:20px; 
 }
 
-.tag_button {
-    padding: 3px 40px;
-    margin-right: 10px;
-    border-radius: 25px;
-    background-color: var(--primary-color);
+.accomodation_infos_tag {
+  display: flex;
+  align-items: center;
+  gap:10px;
+}
+.accomodation_infos_tag_button_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  min-height: 25px;
+  border-radius: 10px;
+  min-width: 115px;
+  line-height: 20px;
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.accomodation_infos_tag_button {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
     color: var(--background-color);
-    text-decoration: none;
-    min-height: 25px;
-    margin-top: 20px;
-    gap: 10px;
   }
   
-  .tag_button:last-child {
+  .accomodation_infos_tag_button:last-child {
     margin-right: 0;
   }
 
@@ -52,8 +73,19 @@
 }
 
 .accomodation_hosts_profile_name{
-    width:93px;
-    text-align:right;
+   
+    height: 64px;
+    width: 93px;
+    display: flex;
+    text-align: right;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--primary-color);
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .accomodation_hosts_details{
@@ -63,13 +95,14 @@
     align-content: center;
     align-items: center;
     justify-content: center;
+    margin-bottom:20px;
 }
 
-  .accomodation_collapse{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap:100px;
+.accomodation_collapse{
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+  width:100%;
   }
 
   .accomodation_collapse_item{
@@ -77,24 +110,14 @@
     width:50%;
   }
 
-  .accomodation_collapse{
-    display: flex;
-    justify-content: space-between;
-    gap: 70px;
-    margin: 30px 0;
-    width:100%;
-    }
+ 
 
-.accomodation{
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    margin-bottom: 20px;
-}
+
 
 .accomodation_hosts_container_stars{
   display:flex;
   gap:10px;
+  justify-content: flex-end;
 }
 
 .accomodation_host_stars{
