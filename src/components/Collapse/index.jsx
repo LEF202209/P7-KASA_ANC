@@ -4,7 +4,6 @@
 import  { useState } from 'react';
 import '../../styles/Collapse.css';
 import arrow from '../../assets/down_arrow.png';
-import Content from '../../components/Collapse/Component/Content';
 
 export default function Collapse({title, content,collapseDirection}) {
     const [isOpen, setIsOpen] = useState(false);
@@ -20,11 +19,9 @@ export default function Collapse({title, content,collapseDirection}) {
                     /> 
                 </div>
                 {isOpen && content && (
-                    <Content className = {`collapse_content_container`}
-                    isOpen = {isOpen}
-                    content = {content}
-                    collapseDirection = {collapseDirection}
-                     />
+                <div className={`${isOpen ? `collapsible_open ${(collapseDirection==='row')?'collapsible_open_row':''}` : 'collapsible_close' }  collapse_content_container `}>
+                     {content} 
+                </div>
                 )}  
             </div>
     )

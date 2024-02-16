@@ -39,8 +39,10 @@ export default function Accomodation () {
     const rating = dataCurrent[0].rating
     /*données collapse*/
     const equipment_list = dataCurrent[0].equipments.map(
-        (equipment, index) => (<li key={index} className="description_content">{equipment}</li>)
-        )
+        // (equipment, index) => (<p key={index} className="description_content">{equipment}</p>)
+        // )
+         (equipment, index) => (<p key={index} >{equipment}</p>)
+       )
     return (
         <div>
             <Header/>
