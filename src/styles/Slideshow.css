@@ -65,11 +65,15 @@
   
 
   .carouselPage{
-    font-size: 30px;
     color: white;
     font-weight: 500;
-    z-index: 50;
+    font-size: 18px;
+    right: 50%;
+    width:34px;
+    height:32.4px;
+    line-height:25.67px;
     position: absolute;
     bottom: 20px;
-    right: 50%;
+    z-index: 50;
+    text-align:center;
   }

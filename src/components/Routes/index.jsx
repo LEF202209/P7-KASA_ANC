@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "../../pages/Home"
 import About from "../../pages/About"
 import Accomodation from "../../pages/Accomodation"
-import Error from "../../pages/Error"
+import Error from "../../pages/ErrorPage"
 import GlobalStyle from '../../styles'
 
 // défini les routes, c'ette fonction est appelé dans index.js

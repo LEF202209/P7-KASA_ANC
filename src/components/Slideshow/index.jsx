@@ -16,7 +16,6 @@ function  Slideshow ({ views })  {
    /* Fonction calcul index pour view précédente */
   const goToPreviousView = () => {
     setCurrentViewIndex (currentViewIndex - 1);
-    console.log(currentViewIndex+ "nbre "+views.length+"lien "+views[currentViewIndex])
     if (currentViewIndex <= 0) {
         setCurrentViewIndex (views.length - 1);
     }

@@ -10,8 +10,8 @@ export default function Collapse({title, content,collapseDirection}) {
     const toggleCollapsible = () => {setIsOpen(!isOpen);};
     return (
             <div className={`collapse_container ${collapseDirection}`}>
-                <div className='collapse_title_container'onClick={toggleCollapsible}>
-                    <h3>{title}</h3>
+                <div className={`collapse_title_container ${collapseDirection==='row'?'collapse_title_container_row':''}`} onClick={toggleCollapsible}>
+                    <h3 >{title}</h3>
                     <img onClick={toggleCollapsible}
                         className={isOpen ? 'arrow down_arrow' : 'arrow up_arrow'} 
                         src={arrow} 
@@ -26,6 +26,5 @@ export default function Collapse({title, content,collapseDirection}) {
             </div>
     )
 }
-
 
 

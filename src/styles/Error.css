@@ -1,13 +1,13 @@
 .Error_container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin: 26px 100px;
-    justify-content: center;
     padding-bottom: 25px;
-}
+    }
 
-.Error_number{
+.Error_number {
     font-weight: 700;
     font-size: 288px;
     color : var(--primary-color);
@@ -18,7 +18,7 @@
     margin-top:200px;
     }
 
-.Error_text{
+.Error_text {
     color : var(--primary-color);
     font-weight: 500;
     font-size:  36px;
@@ -28,21 +28,21 @@
     }
 
 li {
-        display: block;
-        width:284px;
-        height:26px;
-        color : var(--primary-color);
-        text-align: center;
-        font-weight: 500;
-        font-size: 18px;
-}
+    display: block;
+    width:284px;
+    height:26px;
+    color : var(--primary-color);
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    }
 
-.Error_return{
+.Error_return {
     text-decoration: underline;
 	margin-top:182px;
 	margin-bottom:159px;
 	font-size:18px;
-}
+    }
 
 @media screen and (max-width: 996px)
 {
@@ -56,20 +56,19 @@ li {
 
 @media screen and (max-width: 768px)
  {
-    .Error_number
-    {
+    .Error_number {
         height: 99px;
         font-size:96px; 
         line-height: 136.9px;
     }
 
-    .Error_text{
+    .Error_text {
         height:52px;
         font-size:18px;
         line-height:25.67px;
     }
 
-    .Error_return{
+    .Error_return {
         height:20px;
         font-size:14px;
         line-height:19.96px;
