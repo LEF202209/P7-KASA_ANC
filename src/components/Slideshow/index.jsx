@@ -22,8 +22,8 @@ function  Slideshow ({ views })  {
   };
 
   return (
-    <div className="carousel">
-      <section className="carouselImage" >
+    <section className="carousel">
+      <div className="carouselImage" >
         <div className="carouselImageContainer">
           {/* Affiche chaque view */}
           <img src={views[currentViewIndex]} className="carouselImage"
@@ -41,11 +41,13 @@ function  Slideshow ({ views })  {
             <button onClick={goToNextView} className='carouselArrow carouselArrowRight'>
                 <img src={arrowNext} alt="Next" />    
             </button>
-            <span className="carouselPage">{currentViewIndex+1} / {views.length}</span> 
+            {views.length> 0  && (
+                // compteur d'imagesne s'affiche qu'en version Desktop et lorsqu'il y a plusieurs images
+            <span className="carouselPage">{currentViewIndex+1} / {views.length}</span> )}
           </>
       }
-      </section>
       </div>
+      </section>
   );
 };
 

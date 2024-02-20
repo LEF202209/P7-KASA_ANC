@@ -42,7 +42,7 @@
 .collapse_title_container_row h3{
     font-size: 18px;
     width: 124px;
-    line-height: 25.67px;
+    /* line-height: 25.67px; */
 }
 
 .collapse_content_container{   
@@ -94,6 +94,11 @@
     .collapse_title_container {
         height:30px;
     }
+    .collapse_title_container_row {
+        height:29.94px;
+        border-radius:5px;
+    }
+
     .collapsible_open {
         font-size:12px;
         padding: 24.23px 6.91px 31.42px 11.51px;
@@ -101,13 +106,19 @@
     }
     .collapse_container {
         width:100%;
+        margin-bottom:20px;
     }
 
     .collapse_title_container h3{
         font-size:13px;
+        /* line-height: 18.54px; */
     }
     .arrow{
         width: 18.42px; 
         height:18.42px;
+    }
+
+    .collapsible_open_row{
+        min-height: auto;
     }
 }
