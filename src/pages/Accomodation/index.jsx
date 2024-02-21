@@ -45,7 +45,7 @@ export default function Accomodation () {
     return (
         <div>
             <Header/>
-            <main className="Container accomodation_page_container">
+            <main className="container accomodation_container">
                 <Carousel views={imageViews}/>
                 <section className="accomodation">
                     <div className="accomodation_infos">

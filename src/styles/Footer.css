@@ -11,12 +11,12 @@ footer{
     background-color: var(--background-footer);
 }
 
-.Footer_logo {
+.footer_logo {
     height:39px;
     width:122px;
     margin-top:61px;
 }
-.Footer_text{
+.footer_text{
     font-size:24px;
     color:var(--secondary-color);
     margin-bottom : 29px;
@@ -28,7 +28,7 @@ footer{
 
 @media screen and (max-width: 768px)
  {
-    .Footer_text
+    .footer_text
     {
         font-size: 12px; 
     }

@@ -5,12 +5,16 @@
     align-items: center;
     position: relative;
     border-radius: 25px;
-    margin: 70px auto 45px auto;
+    margin: 0px auto 43px auto;
     background-position: center;
     background-size: cover;
     height: 223px;
     padding: 20px;
+    /* à voir avec la mentor */
+    opacity:0.7;
+    mix-blend-mode: darken;
 }
+
 
 .banner_home{
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
@@ -20,6 +24,7 @@ url('../assets/banner_home.jpg');
 .banner_about{
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
 url('../assets/banner_about.jpg');
+    margin-bottom:31px;
 }
 
 h1{
@@ -33,13 +38,14 @@ h1{
     .banner
     {
         justify-content: flex-start;
-        height: 111px;
-        margin:0 auto;
+        margin:0 auto 22px auto;
         border-radius:10px;
+    }
+    .banner_home {
+        height: 111px;
     }
 
     .banner_about{
-        height: 223px; 
         border-radius: 10px;
         margin-bottom:19px;
     }

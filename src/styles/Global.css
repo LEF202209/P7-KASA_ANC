@@ -27,7 +27,7 @@ body{
   margin: 0 auto;
   }
 
-.Container {
+.container {
   width:86%;
   margin-right:auto;
   margin-left: auto;
@@ -48,12 +48,9 @@ img {
 
 @media screen and (max-width: 768px)
  {
-    .Container
+    .container
     {
         width:89%;
-    }
-    body{
-      padding-top: 20px;
     }
   }
 

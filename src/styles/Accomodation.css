@@ -1,7 +1,8 @@
-.accomodation_page_container {
+.accomodation_container {
   display: flex;
   flex-direction: column;
   margin-bottom: 26px;
+  margin-top:20px;
 }
 
 .accomodation{
@@ -11,7 +12,7 @@
 }
 
 .accomodation_infos_title_location{
-margin-top: 10px;
+margin-top: 15px;
 width: 100%;
 display: flex;
 flex-direction: column;
@@ -75,12 +76,12 @@ align-items: flex-start;
   display:flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items:flex-start;
+  align-items:center;
 }
 .accomodation_hosts{
   display: flex;
   flex-direction: column;
-  margin-bottom:20px;
+  margin-bottom:0;
 }
 
 .accomodation_hosts_profile_picture{
@@ -107,10 +108,11 @@ align-items: flex-start;
 .accomodation_hosts_details{
   display: flex;
   flex-direction: row-reverse;
-  align-items: center;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
   align-content: center;
+  gap: 10px;
+  margin-bottom:20px;
 }
 
 .accomodation_collapse{
@@ -125,7 +127,6 @@ align-items: flex-start;
   width:50%;
 }
 
- 
 .accomodation_hosts_container_stars{
   display:flex;
   gap:10px;
@@ -149,8 +150,12 @@ align-items: flex-start;
     gap:10px;
   }
 
+  .accomodation_container{
+    margin-top:15px;
+  }
   .accomodation_infos_title_location{
     margin-bottom:10px;
+    margin-top: 0px;
   }
 
   .accomodation_hosts {
@@ -218,5 +223,4 @@ align-items: flex-start;
   .accomodation_hosts_container_stars{
     gap:5px;
   }
-
 }

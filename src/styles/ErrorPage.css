@@ -1,4 +1,4 @@
-.Error_container {
+.error_container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,7 +7,7 @@
     padding-bottom: 25px;
     }
 
-.Error_number {
+.error_number {
     font-weight: 700;
     font-size: 288px;
     color : var(--primary-color);
@@ -18,7 +18,7 @@
     margin-top:200px;
     }
 
-.Error_text {
+.error_text {
     color : var(--primary-color);
     font-weight: 500;
     font-size:  36px;
@@ -37,7 +37,7 @@ li {
     font-size: 18px;
     }
 
-.Error_return {
+.error_return {
     text-decoration: underline;
 	margin-top:182px;
 	margin-bottom:159px;
@@ -46,7 +46,7 @@ li {
 
 @media screen and (max-width: 996px)
 {
-    .Error_number
+    .error_number
     {
         height: 200px;
         font-size:150px; 
@@ -56,19 +56,19 @@ li {
 
 @media screen and (max-width: 768px)
  {
-    .Error_number {
+    .error_number {
         height: 99px;
         font-size:96px; 
         line-height: 136.9px;
     }
 
-    .Error_text {
+    .error_text {
         height:52px;
         font-size:18px;
         line-height:25.67px;
     }
 
-    .Error_return {
+    .error_return {
         height:20px;
         font-size:14px;
         line-height:19.96px;

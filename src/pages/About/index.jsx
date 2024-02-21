@@ -2,6 +2,8 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Banner from '../../components/Banner';
 import Collapse from '../../components/Collapse';
+import '../../styles/About.css';
+
 
 function About() {
     const datas = [
@@ -29,9 +31,9 @@ function About() {
     return (
         <div>
             <Header />
-            <main className= 'Container'>
+            <main className= 'container about_container'>
 				<Banner/>
-				<section className= 'Collapse'>
+				<section>
 					{datas.map(data => (
 						<Collapse 
 						key={data.id}
