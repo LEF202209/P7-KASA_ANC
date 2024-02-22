@@ -158,14 +158,6 @@ align-items: flex-start;
     margin-top: 0px;
   }
 
-  .accomodation_hosts {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items:center;
-    width: 100%;
-    margin-bottom:10px;
-  }
-
   .accomodation_infos{
     flex-direction:column;
     gap:10px;
@@ -195,6 +187,20 @@ align-items: flex-start;
     line-height: 14.26px;
   }
 
+  
+  .accomodation_hosts {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items:center;
+    width: 100%;
+    margin-bottom:10px;
+  }
+
+  .accomodation_hosts_details {
+    width: 135.5px;
+    margin-bottom: 0;
+  }
+
   .accomodation_hosts_profile_picture {
     height: 32px;
     width: 32px;
@@ -202,7 +208,7 @@ align-items: flex-start;
 
   .accomodation_hosts_profile_name {
     height: 33px;
-    width:83px;
+    width:93px;
     font-size: 12px;
     line-height:17.11px;
   }
@@ -221,6 +227,7 @@ align-items: flex-start;
   }
 
   .accomodation_hosts_container_stars{
-    gap:5px;
+    gap: 7.5px;
+    height: 18px;
   }
 }
