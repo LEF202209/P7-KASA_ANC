@@ -9,7 +9,9 @@ export default function Item({id, title, cover}) {
 	return (
 			<Link to={`/accomodation/${id}`} className="item_container">
 				<img src={cover} alt={title} />
-				<h2>{title}</h2>	
+				<div className="item_name_container">
+					<h2>{title}</h2>
+				</div>	
 			</Link>
 	)
 }

@@ -19,7 +19,7 @@
 
 body{
   min-width: 315px;
-  padding-top: 40px;
+  /* padding-top: 40px; */
   width:100%;
   font-family: var(--font-family);
   margin: 0 auto;
@@ -45,9 +45,9 @@ img {
   }
 
 @media screen and (max-width: 768px){
-  body {
+  /* body {
     padding-top: 20px;
-  }
+  } */
   .container {
       width:89%;
   }

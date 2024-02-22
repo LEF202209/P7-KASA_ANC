@@ -4,6 +4,8 @@ header{
     align-items: center;
     max-width: 90%;
     margin:0 auto;
+    padding-top:40px;
+    height:auto;
     }
 
 .header_logo{
@@ -47,7 +49,7 @@ header{
 
 @media (max-width: 768px) {
     header {
-        height: auto;
+        padding-top:20px;
     }
 
     .header_logo{
