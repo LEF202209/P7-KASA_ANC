@@ -11,7 +11,7 @@ footer{
 
 .footer_logo {
     height:39.44px;
-    width:122px;
+    max-width:122px;
     margin-top:61px;
     margin-bottom:28.56px;
 }

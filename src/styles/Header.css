@@ -9,7 +9,7 @@ header{
     }
 
 .header_logo{
-       width:210.32px;
+       max-width:210.32px;
        height: 68px;
     }
 .header_logo_img{
@@ -53,13 +53,13 @@ header{
     }
 
     .header_logo{
-        width:145px;
+        max-width:145px;
         height: 47px;
      }
 
     .header_logo_img {
         height:47px;
-        width:145px;
+        max-width:145px;
      }
 
     .nav_list_element {

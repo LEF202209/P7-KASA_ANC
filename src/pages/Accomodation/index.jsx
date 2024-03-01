@@ -12,9 +12,11 @@ import Collapse from '../../components/Collapse';
 
 
 export default function Accomodation () {
+    console.log("dans accomodation id")
     const [imageViews, setImageViews] = useState([]);
     /* extraction la valeur du paramètre id de l'URL actuelle */
     const {id} = useParams();
+    console.log("id"+id)
     /* filtre les élts du tableau datas et ne récupérer que la data */
     /* qui a identifiant= contenu variable id. */
     /* stocke le résultat dans la variable dataCurrent */
