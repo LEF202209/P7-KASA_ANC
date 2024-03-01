@@ -1,5 +1,4 @@
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import Layout from '../../layout'
 import Banner from '../../components/Banner';
 import Collapse from '../../components/Collapse';
 import '../../styles/About.css';
@@ -30,22 +29,22 @@ function About() {
 	]
     return (
         <div>
-            <Header />
-            <main className= 'container about_container'>
-				<Banner/>
-				<section>
-					{datas.map(data => (
-						<Collapse 
-						key={data.id}
-						id={data.id}
-						title={data.title}
-						content={data.content}
-						collapseDirection="column"
-						/>
-					))}
-				</section>
-            </main>
-            <Footer/>
+            <Layout >
+				<main className= 'container about_container'>
+					<Banner/>
+					<section>
+						{datas.map(data => (
+							<Collapse 
+							key={data.id}
+							id={data.id}
+							title={data.title}
+							content={data.content}
+							collapseDirection="column"
+							/>
+						))}
+					</section>
+				</main>
+            </Layout>
         </div>
     )
   }

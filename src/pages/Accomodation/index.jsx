@@ -1,14 +1,13 @@
 import '../../styles/Accomodation.css';
 import { useState, useEffect } from 'react';
 import {useParams} from 'react-router-dom';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import Carousel from '../../components/Slideshow';
 import datas from '../../datas/datas';
 import Error from '../ErrorPage';
 import starEmpty from '../../assets/star_empty.png';
 import starFull from '../../assets/star_full.png';
 import Collapse from '../../components/Collapse';
+import Layout from '../../layout'
 
 
 export default function Accomodation () {
@@ -46,7 +45,7 @@ export default function Accomodation () {
         )
     return (
         <div>
-            <Header/>
+            <Layout>
             <main className="container accomodation_container">
                 <Carousel views={imageViews}/>
                 <section className="accomodation">
@@ -100,7 +99,7 @@ export default function Accomodation () {
                     </div>
                 </section>
             </main>
-            <Footer/>
+            </Layout>
             </div>
     )
 }
